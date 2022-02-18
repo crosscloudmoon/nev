@@ -1,12 +1,26 @@
 <template>
     <div id="app">
-        <div class="demoStyle"></div>
-        <div id="nav">
+        <!-- <div id="nav">
             <router-link to="/">Home</router-link>
-        </div>
+        </div> -->
+        <Header v-show="$route.meta.isShowHeader" />
+        <router-link to="/"></router-link>
         <router-view />
+        <Footer v-show="$route.meta.isShowFooter" />
     </div>
 </template>
+<script>
+import Header from 'C/Header';
+import Footer from 'C/Footer';
+
+export default {
+    name: 'App',
+    components: {
+        Header,
+        Footer,
+    },
+};
+</script>
 
 <style lang="scss">
 @import '@/style/public.scss';
@@ -17,18 +31,5 @@
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-}
-
-#nav {
-    padding: 30px;
-
-    a {
-        font-weight: bold;
-        color: #2c3e50;
-
-        &.router-link-exact-active {
-            color: #42b983;
-        }
-    }
 }
 </style>

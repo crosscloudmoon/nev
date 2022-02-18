@@ -1,6 +1,8 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/home';
+import Login from '../views/login';
+import Satellite from '../views/satellite';
 
 Vue.use(VueRouter);
 
@@ -8,8 +10,34 @@ const routes = [
     {
         path: '/',
         name: 'Home',
+        meta: {
+            title: '我是首页',
+            isShowHeader: true,
+            isShowFooter: true,
+        },
         component: Home,
     },
+    {
+        path: '/login',
+        name: 'Login',
+        meta: {
+            title: '我在登录',
+            isShowHeader: false,
+            isShowFooter: false,
+        },
+        component: Login,
+    },
+    {
+        path: '/satellite',
+        name: 'Satellite',
+        meta: {
+            title: '卫星观测',
+            isShowHeader: false,
+            isShowFooter: false,
+        },
+        component: Satellite,
+    },
+
     // {
     //     path: '/about',
     //     name: 'About',

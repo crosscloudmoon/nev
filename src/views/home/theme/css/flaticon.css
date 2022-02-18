@@ -1,0 +1,93 @@
+@font-face {
+    font-family: flaticon;
+    src: url(./font/Flaticon.eot);
+    src: url(./font/Flaticon.eot) format('embedded-opentype'),
+        url(./font/Flaticon.woff2) format('woff2'), url(./font/Flaticon.woff) format('woff'),
+        url(./font/Flaticon.ttf) format('truetype'),
+        url(https://templates.hibootstrap.com/sprio/default/assets/fonts/Flaticon.svg) format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    @font-face {
+        font-family: flaticon;
+        src: url(https://templates.hibootstrap.com/sprio/default/assets/fonts/Flaticon.svg)
+            format('svg');
+    }
+}
+[class^='flaticon-']:before,
+[class*=' flaticon-']:before,
+[class^='flaticon-']:after,
+[class*=' flaticon-']:after {
+    font-family: Flaticon;
+    font-style: normal;
+}
+.flaticon-list:before {
+    content: '\f100';
+}
+.flaticon-vision:before {
+    content: '\f101';
+}
+.flaticon-3d-graphics:before {
+    content: '\f102';
+}
+.flaticon-cube:before {
+    content: '\f103';
+}
+.flaticon-deep-learning:before {
+    content: '\f104';
+}
+.flaticon-ideas:before {
+    content: '\f105';
+}
+.flaticon-telephone:before {
+    content: '\f106';
+}
+.flaticon-menu:before {
+    content: '\f107';
+}
+.flaticon-sketch:before {
+    content: '\f108';
+}
+.flaticon-engineer:before {
+    content: '\f109';
+}
+.flaticon-furnitures:before {
+    content: '\f10a';
+}
+.flaticon-wicker-basket:before {
+    content: '\f10b';
+}
+.flaticon-translator:before {
+    content: '\f10c';
+}
+.flaticon-edit:before {
+    content: '\f10d';
+}
+.flaticon-right-arrow:before {
+    content: '\f10e';
+}
+.flaticon-right-arrow-1:before {
+    content: '\f10f';
+}
+.flaticon-left-arrow-1:before {
+    content: '\f110';
+}
+.flaticon-fireplace:before {
+    content: '\f111';
+}
+.flaticon-phone-call:before {
+    content: '\f112';
+}
+.flaticon-architecture:before {
+    content: '\f113';
+}
+.flaticon-left-arrow:before {
+    content: '\f114';
+}
+.flaticon-chevron:before {
+    content: '\f115';
+}
+.flaticon-left-arrow-2:before {
+    content: '\f116';
+}
