@@ -360,9 +360,9 @@
                         </div>
                     </li>
                     <li class="menu-right">
-                        <router-link to="/satellite" class="menu-button">
+                        <a href="http://36.112.11.166:8083/CP/satellite/#/" class="menu-button">
                             <span class="menu-label">卫星观测</span>
-                        </router-link>
+                        </a>
                     </li>
                 </ul>
                 <div class="btnRight" @click="goLogin">

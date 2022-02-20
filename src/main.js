@@ -7,6 +7,10 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import 'hover.css';
 import './style/animate/animate.min.css';
+
+// import CustomSource from '@/CustomSource/CustomSource';
+// Vue.use(CustomSource);
+
 Vue.config.productionTip = false;
 Vue.use(ElementUI);
 new Vue({

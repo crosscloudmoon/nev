@@ -1,10 +1,9 @@
 #menu {
     font-family: Arial, sans-serif;
-    font-size: 12px;
-    background-color: #404040;
-    /* background-color: #40404050; */
+    font-size: 16px;
+    /* background-color: #404040; */
     width: 100%;
-    height: 40px;
+    height: 50px;
     box-sizing: border-box;
     /* -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -38,6 +37,8 @@
     text-transform: uppercase;
 }
 #menu .menu-top > li {
+    padding-top: 5px;
+    height: 50px;
     float: left;
     position: relative;
     text-align: center;
@@ -107,6 +108,7 @@
     border-radius: 0 0 5px 5px;
     position: absolute;
     left: -5000px;
+    top: 50px;
     opacity: 0;
     z-index: 100;
 }

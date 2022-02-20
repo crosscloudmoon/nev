@@ -4,7 +4,7 @@
             <router-link to="/">Home</router-link>
         </div> -->
         <Header v-show="$route.meta.isShowHeader" />
-        <router-link to="/"></router-link>
+        <!-- <router-link to="/"></router-link> -->
         <router-view />
         <Footer v-show="$route.meta.isShowFooter" />
     </div>
@@ -31,5 +31,6 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
+    height: 100vh;
 }
 </style>

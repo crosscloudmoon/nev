@@ -1,7 +1,5 @@
 const path = require('path');
 const resolve = dir => path.join(__dirname, dir);
-// import Cesium from './ThirdParty/CesiumSource.js';
-
 // const isProd = process.env.NODE_ENV === 'production';
 // const webpack = require('webpack');
 // const CopyWebpackPlugin = require('copy-webpack-plugin');

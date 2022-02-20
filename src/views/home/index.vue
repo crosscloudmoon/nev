@@ -1,10 +1,8 @@
 <template>
     <div class="homeIndex">
-        <!-- <el-carousel :interval="5000" arrow="hover" :autoplay="false">
-            <el-carousel-item v-for="item in 4" :key="item">
-                <h3>{{ item }}</h3>
-            </el-carousel-item>
-        </el-carousel> -->
+        <el-carousel :interval="5000" arrow="hover" :autoplay="true">
+            <el-carousel-item v-for="item in 4" :key="item"></el-carousel-item>
+        </el-carousel>
 
         <div class="mainContent">
             <div class="mainWrap"></div>
@@ -1034,6 +1032,7 @@ export default {
 @import './theme/css/meanmenu.css';
 @import './theme/css/nice-select.min.css';
 .homeIndex {
+    // height: 100vh;
     .mainContent {
         .mainWrap {
             height: 200px;
@@ -1053,21 +1052,40 @@ export default {
 // 轮播图
 <style>
 .el-carousel__container {
-    height: 700px !important;
+    height: 90vh !important;
 }
-.el-carousel__item h3 {
-    color: #475669;
-    font-size: 18px;
-    opacity: 0.75;
-    line-height: 300px;
-    margin: 0;
+.el-carousel__item {
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+.el-carousel__item:nth-child(3) {
+    background-image: url(./theme/image/lbt/earth-img1.jpeg);
+    background-position-y: -220px;
+}
+.el-carousel__item:nth-child(4) {
+    background-image: url(./theme/image/lbt/earth-img2.jpeg);
+    background-position-y: -100px;
+}
+.el-carousel__item:nth-child(5) {
+    background-image: url(./theme/image/lbt/earth-img3.jpeg);
+    background-position-y: -100px;
+}
+.el-carousel__item:nth-child(6) {
+    background-image: url(./theme/image/lbt/earth-img4.jpeg);
+    background-position-y: -180px;
+}
+.el-carousel__item:nth-child(7) {
+    background-image: url(./theme/image/lbt/earth-img5.jpeg);
+    background-position-y: -180px;
 }
 
-.el-carousel__item:nth-child(2n) {
-    background-color: #99a9bf;
+.el-carousel__arrow {
+    width: 60px !important;
+    height: 60px !important;
+    background-color: #ffffff50 !important;
 }
-
-.el-carousel__item:nth-child(2n + 1) {
-    background-color: #d3dce6;
+.el-carousel__button {
+    width: 60px !important;
+    height: 3px !important;
 }
 </style>
