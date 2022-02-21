@@ -125,7 +125,7 @@
                                 <div class="container-max-2">
                                     <div class="slider-content">
                                         <span>A Super Experiences Over</span>
-                                        <h1>Architecture Is The Reaching The Truth</h1>
+                                        <h1>Architecture Is The Reaching The Truths</h1>
                                         <p>
                                             Lorem ipsum dolor sit amet, consectetur adipisicing
                                             elit, sed do eiusmod tempor incididunt ut tur incidunt
