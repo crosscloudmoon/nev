@@ -1,7 +1,7 @@
 <template>
     <div class="homeIndex">
         <el-carousel :interval="5000" arrow="hover" :autoplay="true">
-            <el-carousel-item v-for="item in 4" :key="item"></el-carousel-item>
+            <el-carousel-item v-for="item in 5" :key="item"></el-carousel-item>
         </el-carousel>
 
         <div class="mainContent">
@@ -259,7 +259,9 @@
                         <div class="about-content">
                             <div class="section-title">
                                 <span class="sp-before">About Us</span>
-                                <h2>We Building Everything Best That You Needed</h2>
+                                <h2>
+                                    数字地球是一个以地球坐标为依据的、具有多分辨率的海量数据和多维显示的地球虚拟系统。数字地球看成是“对地球的三维多分辨率表示、它能够放入大量的地理数据”。在接下来对数字地球的直观实例解释中可以发现，戈尔的数字地球学是关于整个地球、全方位的GIS与虚拟现实技术、网络技术相结合的产物。
+                                </h2>
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                                     eiusmod tempor incididunt ut tur incidunt ut labore et dolore
@@ -307,7 +309,7 @@
                             <img src="./theme/picture/about-img1.jpg" alt="Image" />
                             <div class="about-img-text">
                                 <span>Build</span>
-                                <h3>1980</h3>
+                                <h3>1998</h3>
                             </div>
                         </div>
                     </div>
@@ -1045,6 +1047,12 @@ export default {
     }
     .about-area {
         // width: 100%;
+        .section-title {
+            h2 {
+                font-size: 24px;
+                text-indent: 2em;
+            }
+        }
     }
 }
 </style>
@@ -1060,7 +1068,7 @@ export default {
 }
 .el-carousel__item:nth-child(3) {
     background-image: url(./theme/image/lbt/earth-img1.jpeg);
-    background-position-y: -220px;
+    background-position-y: -150px;
 }
 .el-carousel__item:nth-child(4) {
     background-image: url(./theme/image/lbt/earth-img2.jpeg);
@@ -1072,11 +1080,11 @@ export default {
 }
 .el-carousel__item:nth-child(6) {
     background-image: url(./theme/image/lbt/earth-img4.jpeg);
-    background-position-y: -180px;
+    background-position-y: -80px;
 }
 .el-carousel__item:nth-child(7) {
     background-image: url(./theme/image/lbt/earth-img5.jpeg);
-    background-position-y: -180px;
+    background-position-y: -80px;
 }
 
 .el-carousel__arrow {

@@ -3,6 +3,8 @@ import VueRouter from 'vue-router';
 import Home from '../views/home';
 import Login from '../views/login';
 import Satellite from '../views/satellite';
+import DataVisualization from '../views/dataVisualization';
+import AboutEarth from '../views/aboutEarth';
 
 Vue.use(VueRouter);
 
@@ -36,6 +38,26 @@ const routes = [
             isShowFooter: false,
         },
         component: Satellite,
+    },
+    {
+        path: '/dataVisualization',
+        name: 'DataVisualization',
+        meta: {
+            title: '数据可视化模块',
+            isShowHeader: true,
+            isShowFooter: true,
+        },
+        component: DataVisualization,
+    },
+    {
+        path: '/aboutEarth',
+        name: 'AboutEarth',
+        meta: {
+            title: '了解我们的地球',
+            isShowHeader: true,
+            isShowFooter: true,
+        },
+        component: AboutEarth,
     },
 
     // {

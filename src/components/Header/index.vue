@@ -8,6 +8,11 @@
                             <span class="menu-label">首页</span>
                         </router-link>
                     </li>
+                    <li>
+                        <router-link to="/aboutEarth" class="menu-button">
+                            <span class="menu-label">了解地球</span>
+                        </router-link>
+                    </li>
                     <!-- <li>
                     <a href="#" class="menu-button menu-drop">
                         <span class="menu-label">About</span>
@@ -49,10 +54,10 @@
                         <div class="menu-dropdown menu-dropdown2">
                             <ul class="menu-sub">
                                 <li>
-                                    <a href="#" class="menu-subbutton">
-                                        <span class="menu-label">Web Design</span>
-                                        <div class="menu-desc">Lorem ipsum dolor</div>
-                                    </a>
+                                    <router-link to="/dataVisualization" class="menu-subbutton">
+                                        <span class="menu-label">世界人口可视化</span>
+                                        <div class="menu-desc">直观了解各国人口改变</div>
+                                    </router-link>
                                 </li>
                                 <li>
                                     <a href="#" class="menu-subbutton">
