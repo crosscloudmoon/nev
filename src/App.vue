@@ -1,5 +1,5 @@
 <template>
-    <div id="app">
+    <div id="app" class="page-component__scroll">
         <!-- <div id="nav">
             <router-link to="/">Home</router-link>
         </div> -->
@@ -7,6 +7,23 @@
         <!-- <router-link to="/"></router-link> -->
         <router-view />
         <Footer v-show="$route.meta.isShowFooter" />
+        <el-backtop target=".page-component__scroll .el-scrollbar__wrap" :bottom="100">
+            <div
+                style="
+                     {
+                        height: 100%;
+                        width: 100%;
+                        background-color: #f2f5f6;
+                        box-shadow: 0 0 6px rgba(0, 0, 0, 0.12);
+                        text-align: center;
+                        line-height: 40px;
+                        color: #1989fa;
+                    }
+                "
+            >
+                UP
+            </div>
+        </el-backtop>
     </div>
 </template>
 <script>
@@ -32,5 +49,8 @@ export default {
     text-align: center;
     color: #2c3e50;
     height: 100vh;
+}
+.page-component__scroll {
+    height: 100%;
 }
 </style>

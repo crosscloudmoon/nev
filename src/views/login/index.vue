@@ -37,9 +37,9 @@ export default {
     height: 100%;
     background-image: url(./theme/img/loginBg.jpeg);
     background-repeat: no-repeat;
-    background-size: 100% auto;
-    background-position-y: -100px;
-    padding: 340px 0 0 43%;
+    background-size: 120% 120%;
+    background-position: center;
+    padding: 300px 0 0 42%;
 
     .login-wrap {
         width: 300px;

@@ -463,7 +463,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="service-card">
                             <a href="service-details.html">
-                                <img src="./theme/picture/services-img1.jpg" alt="Images" />
+                                <img src="./theme/picture/services-img1.jpeg" alt="Images" />
                             </a>
                             <div class="content">
                                 <h3><a href="service-details.html">Architecture studio</a></h3>
@@ -481,7 +481,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="service-card">
                             <a href="service-details.html">
-                                <img src="./theme/picture/services-img2.jpg" alt="Images" />
+                                <img src="./theme/picture/services-img2.jpeg" alt="Images" />
                             </a>
                             <div class="content">
                                 <h3><a href="service-details.html">Engineering works</a></h3>
@@ -499,7 +499,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="service-card">
                             <a href="service-details.html">
-                                <img src="./theme/picture/services-img3.jpg" alt="Images" />
+                                <img src="./theme/picture/services-img3.jpeg" alt="Images" />
                             </a>
                             <div class="content">
                                 <h3><a href="service-details.html">Interrior design</a></h3>
@@ -517,7 +517,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="service-card">
                             <a href="service-details.html">
-                                <img src="./theme/picture/services-img4.jpg" alt="Images" />
+                                <img src="./theme/picture/services-img4.jpeg" alt="Images" />
                             </a>
                             <div class="content">
                                 <h3><a href="service-details.html">Decoration & art</a></h3>
@@ -535,7 +535,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="service-card">
                             <a href="service-details.html">
-                                <img src="./theme/picture/services-img5.jpg" alt="Images" />
+                                <img src="./theme/picture/services-img5.jpeg" alt="Images" />
                             </a>
                             <div class="content">
                                 <h3><a href="service-details.html">GIS & planning</a></h3>
@@ -553,7 +553,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="service-card">
                             <a href="service-details.html">
-                                <img src="./theme/picture/services-img6.jpg" alt="Images" />
+                                <img src="./theme/picture/services-img6.jpeg" alt="Images" />
                             </a>
                             <div class="content">
                                 <h3><a href="service-details.html">3D work decoration</a></h3>
