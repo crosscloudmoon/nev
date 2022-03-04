@@ -365,25 +365,69 @@
                         </div>
                     </li>
                     <li class="menu-right">
-                        <a href="http://36.112.11.166:8083/CP/satellite/#/" class="menu-button">
+                        <el-link @click="loadingOpenObserve" class="menu-button">
                             <span class="menu-label">卫星观测</span>
-                        </a>
+                        </el-link>
                     </li>
                 </ul>
                 <div class="btnRight" @click="goLogin">
-                    <el-button class="loginBtn hvr-fade">登录</el-button>
+                    <el-button
+                        @click="loadingOpen"
+                        v-loading.fullscreen.lock="fullscreenLoading"
+                        class="loginBtn hvr-fade"
+                    >
+                        登录
+                    </el-button>
+                    <!-- <el-button @click="loadingOpen" v-loading.fullscreen.lock="fullscreenLoading">
+                        test
+                    </el-button> -->
                 </div>
+                <!-- <el-link
+                    @click="loadingOpen"
+                    v-loading.fullscreen.lock="fullscreenLoading"
+                    style="color: white"
+                    href="http://36.112.11.166:8083/CP/satellite/#/"
+                >
+                    test222
+                </el-link> -->
             </div>
         </div>
     </div>
 </template>
 
 <script>
+import { Loading } from 'element-ui';
 export default {
     name: 'Header',
+    data() {
+        return {
+            fullscreenLoading: false,
+        };
+    },
     methods: {
         goLogin() {
             this.$router.push({ path: '/login', query: 'magiss' });
+        },
+        loadingOpen() {
+            this.fullscreenLoading = true;
+            setTimeout(() => {
+                this.fullscreenLoading = false;
+            }, 1000);
+        },
+        loadingOpenObserve() {
+            // Loading.service({
+            //     fullscreen: true,
+            // });
+            const loading = this.$loading({
+                lock: true,
+                text: 'Loading',
+                spinner: 'el-icon-loading',
+                background: 'rgba(0, 0, 0, 0.7)',
+            });
+            setTimeout(() => {
+                loading.close();
+                window.open('http://36.112.11.166:8083/CP/satellite/#/', '_self');
+            }, 1000);
         },
     },
 };

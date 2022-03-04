@@ -271,25 +271,25 @@
                             <div class="row">
                                 <div class="col-lg-6 col-sm-6 col-md-3">
                                     <div class="about-counter">
-                                        <h3>2,750</h3>
+                                        <h3>计算机科学</h3>
                                         <span>Employees & Staffs</span>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-sm-6 col-md-3">
                                     <div class="about-counter">
-                                        <h3>4,620</h3>
+                                        <h3>卫星遥感</h3>
                                         <span>Project Completed</span>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-sm-6 col-md-3">
                                     <div class="about-counter">
-                                        <h3>12,000</h3>
+                                        <h3>互操作性</h3>
                                         <span>Partners Worldwide</span>
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-sm-6 col-md-3">
                                     <div class="about-counter">
-                                        <h3>4,620</h3>
+                                        <h3>海量数据</h3>
                                         <span>Project Completed</span>
                                     </div>
                                 </div>
@@ -299,7 +299,7 @@
                                     <img src="./theme/picture/signatures.png" alt="Images" />
                                 </li>
                                 <li>
-                                    <h3>Devit Black</h3>
+                                    <h3>Digital Globe</h3>
                                 </li>
                             </ul>
                         </div>
@@ -323,7 +323,9 @@
                         <div class="consultation-content">
                             <div class="section-title">
                                 <span class="sp-before">Innovation Starts Here</span>
-                                <h2>Consultation Over 25 Years in the USA Since 1975</h2>
+                                <h2 class="consultationTitle">
+                                    利用数字技术和方法将，构成一个全球的数字模型，在高速网络上进行快速流通，直观完整地了解我们所在的这颗星球
+                                </h2>
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
                                     eiusmod tempor incididunt ut tur incidunt ut labore et dolore
@@ -340,9 +342,9 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="consultation-play-btn">
-                            <a href="javascript:;" class="video-btn popup-btn">
+                            <router-link to="/satellite" class="video-btn popup-btn">
                                 <i class="bx bx-play"></i>
-                            </a>
+                            </router-link>
                         </div>
                     </div>
                 </div>
@@ -1040,11 +1042,6 @@ export default {
             height: 200px;
         }
     }
-    .blocks {
-        width: 100px;
-        height: 50px;
-        background-color: #000;
-    }
     .about-area {
         // width: 100%;
         .section-title {
@@ -1053,6 +1050,28 @@ export default {
                 text-indent: 2em;
             }
         }
+        .container-fluid {
+            .about-content {
+                .row {
+                    h3 {
+                        font-size: 35px;
+                    }
+                }
+            }
+        }
+    }
+    .consultation-area {
+        .section-title {
+            .consultationTitle {
+                font-size: 40px;
+                text-indent: 2em;
+            }
+        }
+    }
+    .blocks {
+        width: 100px;
+        height: 50px;
+        background-color: #000;
     }
 }
 </style>
