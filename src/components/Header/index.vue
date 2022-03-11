@@ -60,29 +60,29 @@
                                     </router-link>
                                 </li>
                                 <li>
-                                    <a href="#" class="menu-subbutton">
-                                        <span class="menu-label">Programming</span>
-                                        <div class="menu-desc">Lorem ipsum dolor</div>
-                                    </a>
+                                    <router-link to="/dataVisualization" class="menu-subbutton">
+                                        <span class="menu-label">各国经济可视化</span>
+                                        <div class="menu-desc">观察世界各国经济变化</div>
+                                    </router-link>
                                 </li>
                                 <li>
-                                    <a href="#" class="menu-subbutton">
-                                        <span class="menu-label">Advertising</span>
-                                        <div class="menu-desc">Lorem ipsum dolor</div>
-                                    </a>
+                                    <router-link to="/dataVisualization" class="menu-subbutton">
+                                        <span class="menu-label">中国男女比例可视化</span>
+                                        <div class="menu-desc">了解我国男女比例问题</div>
+                                    </router-link>
                                 </li>
                                 <li>
-                                    <a href="#" class="menu-subbutton">
-                                        <span class="menu-label">Marketing</span>
-                                        <div class="menu-desc">Lorem ipsum dolor</div>
-                                    </a>
+                                    <router-link to="/dataVisualization" class="menu-subbutton">
+                                        <span class="menu-label">中国。。。</span>
+                                        <div class="menu-desc">。。。</div>
+                                    </router-link>
                                 </li>
-                                <li>
+                                <!-- <li>
                                     <a href="#" class="menu-subbutton">
                                         <span class="menu-label">E-commerce</span>
                                         <div class="menu-desc">Lorem ipsum dolor</div>
                                     </a>
-                                </li>
+                                </li> -->
                             </ul>
                         </div>
                     </li>
@@ -95,9 +95,9 @@
                                 <h1>HTML</h1>
                                 <ul class="menu-sub">
                                     <li>
-                                        <a href="#" class="menu-subbutton">
+                                        <router-link to="/test" class="menu-subbutton">
                                             <span class="menu-label">Pellentesq</span>
-                                        </a>
+                                        </router-link>
                                     </li>
                                     <li>
                                         <a href="#" class="menu-subbutton">
@@ -281,10 +281,10 @@
                         <div class="menu-dropdown menu-dropdown5">
                             <ul class="menu-sub">
                                 <li>
-                                    <a href="#" class="menu-subbutton">
+                                    <router-link to="/aboutEarthReal" class="menu-subbutton">
                                         <span class="menu-label">Pellente</span>
                                         <span class="menu-desc">- Lorem ipsum dolor sit am</span>
-                                    </a>
+                                    </router-link>
                                 </li>
                                 <li>
                                     <a href="#" class="menu-subbutton">
@@ -332,11 +332,16 @@
                         </div>
                     </li>
                     <li class="menu-right">
+                        <el-link @click="loadingOpenObserve" class="menu-button">
+                            <span class="menu-label">卫星观测</span>
+                        </el-link>
+                    </li>
+                    <li class="menu-right">
                         <a href="#" class="menu-button menu-drop">
-                            <span class="menu-label">Info</span>
+                            <span class="menu-label">关于</span>
                         </a>
                         <div class="menu-dropdown menu-dropdown7">
-                            <h1>Quick Info</h1>
+                            <h1 style="font-size: 28px">快速了解</h1>
                             <p>
                                 <span class="emp">Lorem ipsum dolor</span>
                                 sit amet, optiones congue adipiscing elit, sed diam exp nonummy nibh
@@ -363,11 +368,6 @@
                                 duis.
                             </p>
                         </div>
-                    </li>
-                    <li class="menu-right">
-                        <el-link @click="loadingOpenObserve" class="menu-button">
-                            <span class="menu-label">卫星观测</span>
-                        </el-link>
                     </li>
                 </ul>
                 <div class="btnRight" @click="goLogin">

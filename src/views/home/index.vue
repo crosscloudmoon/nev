@@ -582,26 +582,26 @@
                             <h2>Awesome Portfolio</h2>
                         </div>
                         <ul class="tabs">
-                            <li>
-                                <a href="#">All</a>
+                            <li @click="tabsChangeBg">
+                                <a>All</a>
                             </li>
                             <li>
-                                <a href="#">Hospitality</a>
+                                <a>Hospitality</a>
                             </li>
                             <li>
-                                <a href="#">Interior</a>
+                                <a>Interior</a>
                             </li>
                             <li>
-                                <a href="#">Libraries</a>
+                                <a>Libraries</a>
                             </li>
                             <li>
-                                <a href="#">Residential</a>
+                                <a>Residential</a>
                             </li>
                             <li>
-                                <a href="#">Royal</a>
+                                <a>Royal</a>
                             </li>
                             <li>
-                                <a href="#">Theaters</a>
+                                <a>Theaters</a>
                             </li>
                         </ul>
                     </div>
@@ -609,7 +609,7 @@
                         <div class="tabs_item current">
                             <div class="portfolio-item">
                                 <a href="portfolio-details.html">
-                                    <img src="./theme/picture/portfolio-img1.jpg" alt="Images" />
+                                    <img ref="tabsBg" :src="tabImg" alt="Images" />
                                 </a>
                                 <div class="content content4">
                                     <div class="title">
@@ -1001,6 +1001,8 @@
     </div>
 </template>
 <script>
+import tabImg1 from './theme/picture/portfolio-img1.jpg';
+import tabImg2 from './theme/picture/portfolio-img2.jpg';
 // import './theme/js/email-decode.min.js';
 // import './theme/js/jquery-3.5.1.slim.min.js';
 // import './theme/js/bootstrap.bundle.min.js';
@@ -1018,11 +1020,20 @@ export default {
     name: 'Home',
     components: {},
     data() {
-        return {};
+        return {
+            tabImg: tabImg1,
+        };
     },
-    methods: {},
+    methods: {
+        tabsChangeBg() {
+            console.log('src', this.$refs.tabsBg.src);
+            this.$refs.tabsBg.src = './theme/picture/portfolio-img2.jpg';
+            this.tabImg = tabImg2;
+        },
+    },
 };
 </script>
+
 <style lang="scss" scoped>
 @import './theme/css/responsive.css';
 @import './theme/css/style.css';
@@ -1060,6 +1071,11 @@ export default {
             }
         }
     }
+    .service-area {
+        background: url(./theme/picture/map-bottom.png) no-repeat;
+        background-size: auto 100%;
+        background-position-x: -600px;
+    }
     .consultation-area {
         .section-title {
             .consultationTitle {
@@ -1072,6 +1088,12 @@ export default {
         width: 100px;
         height: 50px;
         background-color: #000;
+    }
+    .portfolio-area {
+        .container {
+            .tabs {
+            }
+        }
     }
 }
 </style>

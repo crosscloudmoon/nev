@@ -7,6 +7,7 @@
         <!-- <router-link to="/"></router-link> -->
         <router-view />
         <Footer v-show="$route.meta.isShowFooter" />
+        <!-- <Loading /> -->
         <el-backtop target=".page-component__scroll .el-scrollbar__wrap" :bottom="100">
             <div
                 style="
@@ -29,16 +30,16 @@
 <script>
 import Header from 'C/Header';
 import Footer from 'C/Footer';
-
+// import Loading from 'C/Loading/index.vue';
 export default {
     name: 'App',
     components: {
         Header,
         Footer,
+        // Loading,
     },
 };
 </script>
-
 <style lang="scss">
 @import '@/style/public.scss';
 @import '@/style/common.scss';

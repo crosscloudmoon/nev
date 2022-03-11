@@ -2,23 +2,51 @@
     <div class="loginIndex">
         <div class="login-wrap">
             <h1>Login</h1>
-            <form action="" class="login-content">
+            <!-- <form :model="formInf" action="" class="login-content">
                 <div class="items">
-                    <input type="text" class="account" required />
+                    <input :model="formInf.account" type="text" class="account" required />
                     <label for="">User</label>
                 </div>
                 <div class="items">
-                    <input type="text" class="password" required />
+                    <input :model="testmodle" type="text" class="password" required />
                     <label for="">PassWords</label>
                 </div>
-                <button type="submit" class="btn">
+                <button @click="sumbitForm(formInf)" type="button" class="btn">
                     SUBMIT
                     <span></span>
                     <span></span>
                     <span></span>
                     <span></span>
                 </button>
-            </form>
+            </form> -->
+
+            <el-form :model="InfForm" class="login-content">
+                <el-form-item class="items">
+                    <el-input
+                        v-model="InfForm.account"
+                        class="account"
+                        placeholder="请输入帐号"
+                        style="color: #fff"
+                        required
+                    ></el-input>
+                </el-form-item>
+                <el-form-item class="items">
+                    <el-input
+                        v-model="InfForm.password"
+                        class="password"
+                        placeholder="请输入密码"
+                        style="color: #fff"
+                        required
+                    ></el-input>
+                </el-form-item>
+                <button @click="loginT(InfForm)" type="button" class="btn">
+                    SUBMIT
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </el-form>
         </div>
     </div>
 </template>
@@ -27,12 +55,49 @@ export default {
     name: 'Login',
     components: {},
     data() {
-        return {};
+        return {
+            formInf: {
+                account: '',
+                password: '',
+            },
+            testmodle: '',
+            InfForm: {
+                account: '',
+                password: '',
+            },
+        };
     },
-    methods: {},
+    mounted() {
+        console.log('form', this.formInf);
+    },
+    watch: {
+        formInf: function (newVal, oldVal) {
+            console.log('form', newVal);
+        },
+    },
+    methods: {
+        sumbitForm(param) {
+            // console.log('account', this.formInf.account, 'password', this.formInf.password);
+            // console.log('22', this.testmodle);
+            // if (param.account === 'admin' && param.password === '123') {
+            //     this.$router.push({ path: '/' });
+            // }
+            console.log('param', param);
+        },
+
+        // 登录
+        loginT(param) {
+            if (param.account === 'admin' && param.password === '123') {
+                this.$router.push({ path: '/' });
+            } else {
+                this.$message({ message: '帐号或密码错误', type: 'error' });
+            }
+            console.log('param', param);
+        },
+    },
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 .loginIndex {
     height: 100%;
     background-image: url(./theme/img/loginBg.jpeg);
@@ -104,8 +169,6 @@ export default {
     .login-content button {
         display: inline-block;
         width: 50%;
-        // height: 30px;
-        /* margin: 0px auto; //为什么动不了？ */
         margin-top: 50px;
         position: relative;
         overflow: hidden;

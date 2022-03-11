@@ -5,6 +5,8 @@ import Login from '../views/login';
 import Satellite from '../views/satellite';
 import DataVisualization from '../views/dataVisualization';
 import AboutEarth from '../views/aboutEarth';
+import AboutEarthReal from '../views/aboutEarth/about.vue';
+import test from '../views/test';
 
 Vue.use(VueRouter);
 
@@ -54,10 +56,30 @@ const routes = [
         name: 'AboutEarth',
         meta: {
             title: '了解我们的地球',
-            isShowHeader: true,
-            isShowFooter: true,
+            isShowHeader: false,
+            isShowFooter: false,
         },
         component: AboutEarth,
+    },
+    {
+        path: '/aboutEarthReal',
+        name: 'AboutEarth',
+        meta: {
+            title: '了解我们的地球',
+            isShowHeader: false,
+            isShowFooter: false,
+        },
+        component: AboutEarthReal,
+    },
+    {
+        path: '/test',
+        name: 'test',
+        meta: {
+            title: 'test',
+            isShowHeader: false,
+            isShowFooter: false,
+        },
+        component: test,
     },
 
     // {

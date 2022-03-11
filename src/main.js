@@ -12,9 +12,11 @@ import './style/animate/animate.min.css';
 // Vue.prototype.$echarts = echarts;
 
 // import Header from 'C/Header';
+import Loading from './views/components/loading';
 // import CustomSource from '@/CustomSource/CustomSource';
 // Vue.use(CustomSource);
 // Vue.component('Header', Header);
+Vue.component('Loading', Loading);
 
 Vue.config.productionTip = false;
 Vue.use(ElementUI);

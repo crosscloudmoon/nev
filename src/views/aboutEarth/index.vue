@@ -1,129 +1,246 @@
 <template>
     <div class="earthIndex">
-        <div class="earthContent">地球详情界面</div>
-        <el-upload
-            action="#"
-            :auto-upload="false"
-            :name="'file'"
-            :accept="'file/*'"
-            :on-change="fileFilter"
-        >
-            <el-button ref="uploadFileBtn">点击上传文件</el-button>
-        </el-upload>
-        <div class="pdf" v-show="fileType === 'pdf'">
-            <p class="arrow">
-                <span @click="changePdfPage(0)" class="turn" :class="{ grey: currentPage == 1 }">
-                    Preview
-                </span>
-                {{ currentPage }} / {{ pageCount }}
-                <span
-                    @click="changePdfPage(1)"
-                    class="turn"
-                    :class="{ grey: currentPage == pageCount }"
-                >
-                    Next
-                </span>
-            </p>
-            <pdf
-                :src="src"
-                :page="currentPage"
-                @num-pages="pageCount = $event"
-                @page-loaded="currentPage = $event"
-                @loaded="loadPdfHandler"
-            ></pdf>
+        <div v-show="isShowMain" class="earthContent">
+            <!-- Banner -->
+            <section id="banner">
+                <div class="content">
+                    <header>
+                        <h2>The future has landed</h2>
+                        <p>
+                            And there are no hoverboards or flying cars.
+                            <br />
+                            Just apps. Lots of mother flipping apps.
+                        </p>
+                    </header>
+                    <span class="image"><img src="images/pic01.jpg" alt="" /></span>
+                </div>
+                <a href="#one" class="goto-next scrolly">Next</a>
+            </section>
+
+            <!-- One -->
+            <section id="one" class="spotlight style1 bottom">
+                <span class="image fit main"><img src="images/pic02.jpg" alt="" /></span>
+                <div class="content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-4 col-12-medium">
+                                <header>
+                                    <h2>Odio faucibus ipsum integer consequat</h2>
+                                    <p>
+                                        Nascetur eu nibh vestibulum amet gravida nascetur praesent
+                                    </p>
+                                </header>
+                            </div>
+                            <div class="col-4 col-12-medium">
+                                <p>
+                                    Feugiat accumsan lorem eu ac lorem amet sed accumsan donec.
+                                    Blandit orci porttitor semper. Arcu phasellus tortor enim mi
+                                    nisi praesent dolor adipiscing. Integer mi sed nascetur cep
+                                    aliquet augue varius tempus lobortis porttitor accumsan
+                                    consequat adipiscing lorem dolor.
+                                </p>
+                            </div>
+                            <div class="col-4 col-12-medium">
+                                <p>
+                                    Morbi enim nascetur et placerat lorem sed iaculis neque ante
+                                    adipiscing adipiscing metus massa. Blandit orci porttitor
+                                    semper. Arcu phasellus tortor enim mi mi nisi praesent
+                                    adipiscing. Integer mi sed nascetur cep aliquet augue varius
+                                    tempus. Feugiat lorem ipsum dolor nullam.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#two" class="goto-next scrolly">Next</a>
+            </section>
+
+            <!-- Two -->
+            <section id="two" class="spotlight style2 right">
+                <span class="image fit main"><img src="images/pic03.jpg" alt="" /></span>
+                <div class="content">
+                    <header>
+                        <h2>Interdum amet non magna accumsan</h2>
+                        <p>Nunc commodo accumsan eget id nisi eu col volutpat magna</p>
+                    </header>
+                    <p>
+                        Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim mi mi
+                        nisi praesent adipiscing. Integer mi sed nascetur cep aliquet augue varius
+                        tempus lobortis porttitor lorem et accumsan consequat adipiscing lorem.
+                    </p>
+                    <ul class="actions">
+                        <li><a href="#" class="button">Learn More</a></li>
+                    </ul>
+                </div>
+                <a href="#three" class="goto-next scrolly">Next</a>
+            </section>
+
+            <!-- Three -->
+            <section id="three" class="spotlight style3 left">
+                <span class="image fit main bottom"><img src="images/pic04.jpg" alt="" /></span>
+                <div class="content">
+                    <header>
+                        <h2>Interdum felis blandit praesent sed augue</h2>
+                        <p>Accumsan integer ultricies aliquam vel massa sapien phasellus</p>
+                    </header>
+                    <p>
+                        Feugiat accumsan lorem eu ac lorem amet ac arcu phasellus tortor enim mi mi
+                        nisi praesent adipiscing. Integer mi sed nascetur cep aliquet augue varius
+                        tempus lobortis porttitor lorem et accumsan consequat adipiscing lorem.
+                    </p>
+                    <ul class="actions">
+                        <li><a href="#" class="button">Learn More</a></li>
+                    </ul>
+                </div>
+                <a href="#four" class="goto-next scrolly">Next</a>
+            </section>
+
+            <!-- Four -->
+            <section id="four" class="wrapper style1 special fade-up">
+                <div class="container">
+                    <header class="major">
+                        <h2>Accumsan sed tempus adipiscing blandit</h2>
+                        <p>
+                            Iaculis ac volutpat vis non enim gravida nisi faucibus posuere arcu
+                            consequat
+                        </p>
+                    </header>
+                    <div class="box alt">
+                        <div class="row gtr-uniform">
+                            <section class="col-4 col-6-medium col-12-xsmall">
+                                <span class="icon solid alt major fa-chart-area"></span>
+                                <h3>Ipsum sed commodo</h3>
+                                <p>
+                                    Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit
+                                    orci porttitor.
+                                </p>
+                            </section>
+                            <section class="col-4 col-6-medium col-12-xsmall">
+                                <span class="icon solid alt major fa-comment"></span>
+                                <h3>Eleifend lorem ornare</h3>
+                                <p>
+                                    Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit
+                                    orci porttitor.
+                                </p>
+                            </section>
+                            <section class="col-4 col-6-medium col-12-xsmall">
+                                <span class="icon solid alt major fa-flask"></span>
+                                <h3>Cubilia cep lobortis</h3>
+                                <p>
+                                    Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit
+                                    orci porttitor.
+                                </p>
+                            </section>
+                            <section class="col-4 col-6-medium col-12-xsmall">
+                                <span class="icon solid alt major fa-paper-plane"></span>
+                                <h3>Non semper interdum</h3>
+                                <p>
+                                    Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit
+                                    orci porttitor.
+                                </p>
+                            </section>
+                            <section class="col-4 col-6-medium col-12-xsmall">
+                                <span class="icon solid alt major fa-file"></span>
+                                <h3>Odio laoreet accumsan</h3>
+                                <p>
+                                    Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit
+                                    orci porttitor.
+                                </p>
+                            </section>
+                            <section class="col-4 col-6-medium col-12-xsmall">
+                                <span class="icon solid alt major fa-lock"></span>
+                                <h3>Massa arcu accumsan</h3>
+                                <p>
+                                    Feugiat accumsan lorem eu ac lorem amet accumsan donec. Blandit
+                                    orci porttitor.
+                                </p>
+                            </section>
+                        </div>
+                    </div>
+                    <footer class="major">
+                        <ul class="actions special">
+                            <li><a href="#" class="button">Magna sed feugiat</a></li>
+                        </ul>
+                    </footer>
+                </div>
+            </section>
+
+            <!-- Five -->
+            <section id="five" class="wrapper style2 special fade">
+                <div class="container">
+                    <header>
+                        <h2>Magna faucibus lorem diam</h2>
+                        <p>Ante metus praesent faucibus ante integer id accumsan eleifend</p>
+                    </header>
+                    <form method="post" action="#" class="cta">
+                        <div class="row gtr-uniform gtr-50">
+                            <div class="col-8 col-12-xsmall">
+                                <input
+                                    type="email"
+                                    name="email"
+                                    id="email"
+                                    placeholder="Your Email Address"
+                                />
+                            </div>
+                            <div class="col-4 col-12-xsmall">
+                                <input type="submit" value="Get Started" class="fit primary" />
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
         </div>
-        <!-- <pdf ref="pdf" :src="url" v-for="i in numPages" :key="i" :page="i"></pdf> -->
+        <Loading v-show="isShowLoading" />
     </div>
 </template>
 <script>
-import pdf from 'vue-pdf';
 export default {
     name: 'AboutEarth',
-    components: {
-        pdf,
-    },
-    // created: {
-    //     this.src = pdf.createLoadingTask(this.src)
-    // },
+    components: {},
     data() {
-        return {
-            src: 'http://36.112.11.166:8077/query/inspectupload/data/algorithm/2021-12-02/85f5369efb40e9f24f54079ce97e09d7_piesat.ortho.img_ortho_1.1/SelfEvaluation.pdf',
-            currentPage: 0, // pdf文件页码
-            pageCount: 0, // pdf文件总页数
-            fileType: 'pdf', // 文件类型
-            // url: 'http://36.112.11.166:8077/query/inspectupload/data/algorithm/2021-12-02/85f5369efb40e9f24f54079ce97e09d7_piesat.ortho.img_ortho_1.1/SelfEvaluation.pdf', // pdf文件地址
-            // numPages: null, // pdf 总页数
-        };
+        return { isShowMain: false, isShowLoading: true };
     },
     mounted() {
-        // this.getNumPages();
+        this.loading();
     },
     methods: {
-        // 改变PDF页码,val传过来区分上一页下一页的值,0上一页,1下一页
-        changePdfPage(val) {
-            // console.log(val)
-            if (val === 0 && this.currentPage > 1) {
-                this.currentPage--;
-                // console.log(this.currentPage)
-            }
-            if (val === 1 && this.currentPage < this.pageCount) {
-                this.currentPage++;
-                // console.log(this.currentPage)
-            }
-        },
-
-        // pdf加载时
-        loadPdfHandler(e) {
-            this.currentPage = 1; // 加载的时候先加载第一页
-        },
-
-        // 计算pdf页码总数
-        getNumPages() {
-            let loadingTask = pdf.createLoadingTask(this.url);
-            loadingTask.promise
-                .then(pdf => {
-                    this.numPages = pdf.numPages;
-                })
-                .catch(err => {
-                    console.error('pdf 加载失败', err);
-                });
-        },
-
-        fileFilter(file) {
-            this.$nextTick(() => {
-                let fileEle = file.raw;
-                this.file = file;
-                const isFile = fileEle.type === 'application/pdf';
-                const isLt2M = file.size / 5000 / 5000 < 1;
-                if (!isFile) {
-                    this.$message.error('上传文件只能是 pdf 格式!');
-                }
-                if (!isLt2M) {
-                    this.$message.error('上传图片大小不能超过 1MB!');
-                }
-
-                if (isFile && isLt2M) {
-                    // this.uploadPdf();
-                    let formdata = new window.FormData();
-                    console.log(this.file.raw);
-                    formdata.append('file', this.file.raw);
-                    console.log('succss up');
-                }
-            });
+        loading() {
+            setTimeout(() => {
+                this.isShowMain = true;
+                this.isShowLoading = false;
+            }, 1000);
         },
     },
 };
 </script>
 
 <style lang="scss" scoped>
+@import './theme/css/main.css';
 .earthIndex {
-    .earthContent {
-        height: 500px;
+    background: #1c1d26;
+    a {
+        -moz-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+        -webkit-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+        -ms-transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+        transition: border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+        border-bottom: dotted 1px;
+        color: #e44c65;
+        text-decoration: none;
     }
-    .pdf {
-        margin: 0 auto;
-        width: 500px;
-        height: 800px;
+
+    a:hover {
+        color: #e44c65 !important;
+        border-bottom-color: transparent;
+    }
+    ul li {
+        padding-left: 0.5em;
+    }
+    input[type='text']:focus,
+    input[type='password']:focus,
+    input[type='email']:focus,
+    select:focus,
+    textarea:focus {
+        border-color: #e44c65;
     }
 }
 </style>

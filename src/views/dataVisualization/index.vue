@@ -3,6 +3,12 @@
         <div class="dataVisualMain">
             可视化化界面
             <div class="chartsArea">
+                <el-link
+                    @click="changeEchartsType"
+                    style="background: #000; height: 50px; margin-top: 50px"
+                >
+                    <i class="el-icon-arrow-right">切换类型</i>
+                </el-link>
                 <div id="testEcharts"></div>
                 <div id="testEcharts2"></div>
                 <div id="testEcharts3"></div>
@@ -24,9 +30,19 @@ export default {
         this.echartsLoad3();
     },
     data() {
-        return {};
+        return { echartsType: 'bar' };
     },
     methods: {
+        changeEchartsType() {
+            if (this.echartsType === 'bar') {
+                this.echartsType = 'pie';
+                this.echartsLoad();
+            } else {
+                this.echartsType = 'bar';
+                this.echartsLoad();
+            }
+            console.log('type', this.echartsType);
+        },
         echartsLoad() {
             let myChart = echarts.init(document.getElementById('testEcharts'));
             myChart.setOption({
@@ -41,7 +57,7 @@ export default {
                 series: [
                     {
                         name: '销量',
-                        type: 'bar',
+                        type: this.echartsType,
                         data: [5, 20, 36, 10, 10, 20],
                     },
                 ],
@@ -199,7 +215,7 @@ export default {
                 series: [
                     {
                         name: '数量',
-                        type: 'bar',
+                        type: this.echartsType,
                         zlevel: 1,
                         itemStyle: {
                             normal: {

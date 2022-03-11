@@ -1,10 +1,10 @@
 <template>
     <div class="footer">
         <ul class="copyright">
-            <li>&copy; Untitled. All rights reserved.</li>
+            <li>&copy; 杨震宇. All rights reserved.</li>
             <li>
-                Design:
-                <a href="http://html5up.net">HTML5 UP</a>
+                数学与信息科技学院:
+                <a href="#">网络工程1802</a>
             </li>
         </ul>
     </div>
@@ -21,4 +21,12 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import './theme/css/footer.scss';
+.footer {
+    .copyright {
+        padding-top: 10px;
+        li:nth-child(1) {
+            margin-bottom: 30px;
+        }
+    }
+}
 </style>
